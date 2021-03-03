@@ -20,6 +20,11 @@ class ToDoListViewController: UITableViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchTask()
+    }
+    
     // - MARK: Actions
     
     @IBAction func saveTask(_ sender: UIBarButtonItem) {
@@ -30,7 +35,6 @@ class ToDoListViewController: UITableViewController {
             let textField = alertController.textFields?.first
             if let newTaskTitle = textField?.text {
                 self.saveTask(withTitle: newTaskTitle)
-                // self.tasks.insert(newTask, at: 0)
                 self.tableView.reloadData()
             }
         }
@@ -42,11 +46,15 @@ class ToDoListViewController: UITableViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func removeAllTasks(_ sender: UIBarButtonItem) {
+        removeAllTasks()
+    }
+    
+    
     // MARK: - Helpers
     
     private func saveTask(withTitle title: String) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+        let context = getContext()
         
         guard let entity = NSEntityDescription.entity(forEntityName: "Task", in: context) else {
             return print("Error get entity")
@@ -58,9 +66,51 @@ class ToDoListViewController: UITableViewController {
         // save context
         do {
             try context.save()
+            tasks.insert(taskObject, at: 0)
         } catch let error as NSError {
             print(error.localizedDescription)
         }
+    }
+    
+    private func fetchTask() {
+        let context = getContext()
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        
+        // change the order of output of tasks
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        // fetch context
+        do {
+            tasks = try context.fetch(fetchRequest)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+    }
+    
+    private func removeAllTasks() {
+        let context = getContext()
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        if let objects = try? context.fetch(fetchRequest) {
+            for object in objects {
+                context.delete(object)
+            }
+        }
+        
+        // save context
+        do {
+            try context.save()
+            self.tasks.removeAll()
+            self.tableView.reloadData()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
+    }
+    
+    private func getContext() -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
     }
 
 }
