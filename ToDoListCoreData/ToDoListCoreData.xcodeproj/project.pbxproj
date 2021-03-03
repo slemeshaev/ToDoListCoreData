@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		66E270B625EFC54200F13AA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E270B525EFC54200F13AA9 /* AppDelegate.swift */; };
 		66E270B825EFC54200F13AA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E270B725EFC54200F13AA9 /* SceneDelegate.swift */; };
-		66E270BA25EFC54200F13AA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E270B925EFC54200F13AA9 /* ViewController.swift */; };
 		66E270BD25EFC54200F13AA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E270BB25EFC54200F13AA9 /* Main.storyboard */; };
 		66E270C025EFC54200F13AA9 /* ToDoListCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66E270BE25EFC54200F13AA9 /* ToDoListCoreData.xcdatamodeld */; };
 		66E270C225EFC54300F13AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E270C125EFC54300F13AA9 /* Assets.xcassets */; };
 		66E270C525EFC54300F13AA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E270C325EFC54300F13AA9 /* LaunchScreen.storyboard */; };
+		66E270D325EFF64600F13AA9 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E270D225EFF64600F13AA9 /* ToDoListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		66E270B225EFC54200F13AA9 /* ToDoListCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E270B525EFC54200F13AA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66E270B725EFC54200F13AA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66E270B925EFC54200F13AA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		66E270BC25EFC54200F13AA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66E270BF25EFC54200F13AA9 /* ToDoListCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoListCoreData.xcdatamodel; sourceTree = "<group>"; };
 		66E270C125EFC54300F13AA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66E270C425EFC54300F13AA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66E270C625EFC54300F13AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66E270D225EFF64600F13AA9 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				66E270B525EFC54200F13AA9 /* AppDelegate.swift */,
 				66E270B725EFC54200F13AA9 /* SceneDelegate.swift */,
-				66E270B925EFC54200F13AA9 /* ViewController.swift */,
+				66E270D225EFF64600F13AA9 /* ToDoListViewController.swift */,
 				66E270BB25EFC54200F13AA9 /* Main.storyboard */,
 				66E270C125EFC54300F13AA9 /* Assets.xcassets */,
 				66E270C325EFC54300F13AA9 /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66E270BA25EFC54200F13AA9 /* ViewController.swift in Sources */,
+				66E270D325EFF64600F13AA9 /* ToDoListViewController.swift in Sources */,
 				66E270B625EFC54200F13AA9 /* AppDelegate.swift in Sources */,
 				66E270C025EFC54200F13AA9 /* ToDoListCoreData.xcdatamodeld in Sources */,
 				66E270B825EFC54200F13AA9 /* SceneDelegate.swift in Sources */,
