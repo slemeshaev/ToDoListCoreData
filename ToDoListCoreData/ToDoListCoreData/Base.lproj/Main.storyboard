@@ -31,6 +31,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="To-Do List" id="kRY-7o-jtf">
+                        <barButtonItem key="leftBarButtonItem" title="Remove All" style="done" id="JMk-3Q-y5p">
+                            <color key="tintColor" systemColor="systemPinkColor"/>
+                            <connections>
+                                <action selector="removeAllTasks:" destination="22B-JP-9pK" id="2KX-Y8-Ucc"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="6bS-fN-2lN">
                             <connections>
                                 <action selector="saveTask:" destination="22B-JP-9pK" id="FEK-pj-lQR"/>
@@ -64,6 +70,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
