@@ -88,6 +88,11 @@ class ToDoListViewController: UITableViewController {
         }
     }
     
+    private func deleteTask() {
+//        let context = getContext()
+//        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+    }
+    
     private func removeAllTasks() {
         let context = getContext()
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -127,6 +132,19 @@ extension ToDoListViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = tasks[indexPath.row].title
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, complete in
+            self.tasks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            complete(true)
+        }
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = true
+        
+        return configuration
     }
 
 }
