@@ -14,9 +14,9 @@
 		66E270C225EFC54300F13AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E270C125EFC54300F13AA9 /* Assets.xcassets */; };
 		66E270C525EFC54300F13AA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E270C325EFC54300F13AA9 /* LaunchScreen.storyboard */; };
 		66E270D325EFF64600F13AA9 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E270D225EFF64600F13AA9 /* ToDoListViewController.swift */; };
-		66E85BC425F044AB00051C85 /* Screenshot_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 66E85BC125F044AB00051C85 /* Screenshot_01.png */; };
-		66E85BC525F044AB00051C85 /* Screenshot_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 66E85BC225F044AB00051C85 /* Screenshot_02.png */; };
-		66E85BC625F044AB00051C85 /* Screenshot_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 66E85BC325F044AB00051C85 /* Screenshot_03.png */; };
+		66E85BCE25F046E600051C85 /* Screenshot_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66E85BCB25F046E600051C85 /* Screenshot_1.png */; };
+		66E85BCF25F046E600051C85 /* Screenshot_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66E85BCC25F046E600051C85 /* Screenshot_3.png */; };
+		66E85BD025F046E600051C85 /* Screenshot_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66E85BCD25F046E600051C85 /* Screenshot_2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		66E270C425EFC54300F13AA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66E270C625EFC54300F13AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66E270D225EFF64600F13AA9 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
-		66E85BC125F044AB00051C85 /* Screenshot_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot_01.png; sourceTree = "<group>"; };
-		66E85BC225F044AB00051C85 /* Screenshot_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot_02.png; sourceTree = "<group>"; };
-		66E85BC325F044AB00051C85 /* Screenshot_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot_03.png; sourceTree = "<group>"; };
+		66E85BCB25F046E600051C85 /* Screenshot_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot_1.png; sourceTree = "<group>"; };
+		66E85BCC25F046E600051C85 /* Screenshot_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot_3.png; sourceTree = "<group>"; };
+		66E85BCD25F046E600051C85 /* Screenshot_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot_2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 		66E85BC025F0448C00051C85 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				66E85BC125F044AB00051C85 /* Screenshot_01.png */,
-				66E85BC225F044AB00051C85 /* Screenshot_02.png */,
-				66E85BC325F044AB00051C85 /* Screenshot_03.png */,
+				66E85BCB25F046E600051C85 /* Screenshot_1.png */,
+				66E85BCD25F046E600051C85 /* Screenshot_2.png */,
+				66E85BCC25F046E600051C85 /* Screenshot_3.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -145,10 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				66E270C525EFC54300F13AA9 /* LaunchScreen.storyboard in Resources */,
+				66E85BCE25F046E600051C85 /* Screenshot_1.png in Resources */,
+				66E85BD025F046E600051C85 /* Screenshot_2.png in Resources */,
 				66E270C225EFC54300F13AA9 /* Assets.xcassets in Resources */,
-				66E85BC625F044AB00051C85 /* Screenshot_03.png in Resources */,
-				66E85BC425F044AB00051C85 /* Screenshot_01.png in Resources */,
-				66E85BC525F044AB00051C85 /* Screenshot_02.png in Resources */,
+				66E85BCF25F046E600051C85 /* Screenshot_3.png in Resources */,
 				66E270BD25EFC54200F13AA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
