@@ -45,6 +45,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6628FEBC25F6C3C7000389AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66E270D225EFF64600F13AA9 /* ToDoListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6628FEBD25F6C3D3000389AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66E270BB25EFC54200F13AA9 /* Main.storyboard */,
+				66E270C325EFC54300F13AA9 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6628FEBE25F6C3DC000389AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66E270BE25EFC54200F13AA9 /* ToDoListCoreData.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6628FEBF25F6C3EC000389AF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				66E85BC025F0448C00051C85 /* Screenshots */,
+				66E270C125EFC54300F13AA9 /* Assets.xcassets */,
+				66E270C625EFC54300F13AA9 /* Info.plist */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6628FEC025F6C415000389AF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6628FEC125F6C41F000389AF /* Delegates */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6628FEC125F6C41F000389AF /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				66E270B525EFC54200F13AA9 /* AppDelegate.swift */,
+				66E270B725EFC54200F13AA9 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		66E270A925EFC54200F13AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -64,15 +116,11 @@
 		66E270B425EFC54200F13AA9 /* ToDoListCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				66E270B525EFC54200F13AA9 /* AppDelegate.swift */,
-				66E270B725EFC54200F13AA9 /* SceneDelegate.swift */,
-				66E270D225EFF64600F13AA9 /* ToDoListViewController.swift */,
-				66E270BB25EFC54200F13AA9 /* Main.storyboard */,
-				66E270C125EFC54300F13AA9 /* Assets.xcassets */,
-				66E270C325EFC54300F13AA9 /* LaunchScreen.storyboard */,
-				66E270C625EFC54300F13AA9 /* Info.plist */,
-				66E270BE25EFC54200F13AA9 /* ToDoListCoreData.xcdatamodeld */,
-				66E85BC025F0448C00051C85 /* Screenshots */,
+				6628FEBE25F6C3DC000389AF /* Model */,
+				6628FEBD25F6C3D3000389AF /* View */,
+				6628FEBC25F6C3C7000389AF /* Controller */,
+				6628FEC025F6C415000389AF /* Protocols */,
+				6628FEBF25F6C3EC000389AF /* Helpers */,
 			);
 			path = ToDoListCoreData;
 			sourceTree = "<group>";
@@ -312,7 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GWB2H668N;
-				INFOPLIST_FILE = ToDoListCoreData/Info.plist;
+				INFOPLIST_FILE = ToDoListCoreData/Helpers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -332,7 +380,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GWB2H668N;
-				INFOPLIST_FILE = ToDoListCoreData/Info.plist;
+				INFOPLIST_FILE = ToDoListCoreData/Helpers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
