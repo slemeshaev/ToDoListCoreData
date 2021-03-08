@@ -88,11 +88,6 @@ class ToDoListViewController: UITableViewController {
         }
     }
     
-    private func deleteTask() {
-//        let context = getContext()
-//        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-    }
-    
     private func removeAllTasks() {
         let context = getContext()
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -102,7 +97,6 @@ class ToDoListViewController: UITableViewController {
             }
         }
         
-        // save context
         do {
             try context.save()
             self.tasks.removeAll()
@@ -134,17 +128,21 @@ extension ToDoListViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
         
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, complete in
-            self.tasks.remove(at: indexPath.row)
+        let context = getContext()
+        let task = tasks[indexPath.row]
+        context.delete(task)
+        
+        do {
+            try context.save()
+            tasks.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
-            complete(true)
+            tableView.reloadData()
+        } catch let error as NSError {
+            print(error.localizedDescription)
         }
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
-        configuration.performsFirstActionWithFullSwipe = true
-        
-        return configuration
     }
 
 }
